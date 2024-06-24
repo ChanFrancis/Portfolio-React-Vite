@@ -1,0 +1,80 @@
+.RotateLeftOut {
+    animation: RotateLeftOut 1.25s forwards;
+    transform-origin: left;
+}
+
+.RotateLeftIn {
+    animation: RotateLeftIn 1.25s forwards;
+    transform-origin: left;
+}
+
+
+@keyframes RotateLeftOut {
+    from {
+        transform: translateX(0);
+    }
+
+    90% {
+        transform: perspective(50vw) translateX(-20vw) scale(0.5) rotateY(90deg);
+    }
+
+    to {
+        transform: perspective(50vw) translateX(-100vw) scale(0.5) rotateY(90deg)
+    }
+}
+
+
+@keyframes RotateLeftIn {
+    from {
+        transform: perspective(50vw) translateX(-100vw) scale(0.5) rotateY(90deg);
+    }
+
+    10% {
+        transform: perspective(50vw) translateX(-20vw) scale(0.5) rotateY(90deg);
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+
+.RotateRightOut {
+    animation: RotateRightOut 1.25s forwards;
+    transform-origin: right;
+}
+
+.RotateRightIn {
+    animation: RotateRightIn 1.25s forwards;
+    transform-origin: right;
+}
+
+
+@keyframes RotateRightOut {
+    from {
+        transform: translateX(0);
+    }
+
+    90% {
+        transform: perspective(50vw) translateX(20vw) scale(0.5) rotateY(-90deg);
+    }
+
+    to {
+        transform: perspective(50vw) translateX(100vw) scale(0.5) rotateY(-90deg)
+    }
+}
+
+
+@keyframes RotateRightIn {
+    from {
+        transform: perspective(50vw) translateX(100vw) scale(0.5) rotateY(-90deg);
+    }
+
+    10% {
+        transform: perspective(50vw) translateX(20vw) scale(0.5) rotateY(-90deg);
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "title": "Portfolio",
+        "stacks": "React,Vite",
+        "description": "Developing my website using React/Vite. Implementing Redux, Reducer, Spline, and other hooks.",
+        "git": "",
+        "link": "/"
+    },
+    {
+        "id": 2,
+        "title": "ToDoList",
+        "stacks": "JS",
+        "description": "Making a to do list with JS. CRUD available and a search bar.",
+        "git": "https://github.com/ChanFrancis/ToDoList-JS",
+        "link": ""
+    },
+    {
+        "id": 3,
+        "title": "Sudoku",
+        "stacks": "JS",
+        "description": "Sudoku game using JS. You can play the game and check if your input are correct or not.",
+        "git": "https://github.com/ChanFrancis/Sudoku-JS?tab=readme-ov-file",
+        "link": "https://sudoku-js-chx6.onrender.com/"
+    },
+    {
+        "id": 4,
+        "title": "Social_media",
+        "stacks": "MongoDB,Express,React,Node.JS",
+        "description": "Developping social media using MERN Stack. Real time messenger with SocketIO, Rest API, authentication, ...",
+        "git": "https://github.com/ChanFrancis/Reseau-social-MERN--API-rest-MVC",
+        "link": "https://frontendprojet.onrender.com/"
+    },
+    {
+        "id": 5,
+        "title": "Visit_card",
+        "stacks": "HTML,CSS",
+        "description": "Small visit card/ mini-portfolio developped with HTML and CSS only.",
+        "git": "https://github.com/ChanFrancis/Ma-carte-de-visite-HTML-CSS",
+        "link": ""
+    },
+    {
+        "id": 6,
+        "title": "Bootstrap",
+        "stacks": "Bootstrap",
+        "description": "Remodeling the Visit card project using bootstrap.",
+        "git": "https://github.com/ChanFrancis/project-bootstrap",
+        "link": ""
+    },
+    {
+        "id": 7,
+        "title": "Display_JSON_data",
+        "stacks": "Angular",
+        "description": "Fetching JSON data and displaying the content using Angular",
+        "git": "https://github.com/ChanFrancis/Display-JSON-Angular",
+        "link": ""
+    },
+    {
+        "id": 8,
+        "title": "Calculator",
+        "stacks": "Angular",
+        "description": "Calculator developped with Angular",
+        "git": "https://github.com/ChanFrancis/Calculatrice-Angular",
+        "link": ""
+    },
+    {
+        "id": 9,
+        "title": "Movie_searcher",
+        "stacks": "JS,HTML,CSS",
+        "description": "Using the OMDB API to research movie in their database and displaying the result.",
+        "git": "https://github.com/ChanFrancis/API-Fetch-Movie-Search-JS-AJAX",
+        "link": "https://francis-chan-ajax-c8d5ed.netlify.app/"
+    },
+    {
+        "id": 10,
+        "title": "Website_home_page_copy",
+        "stacks": "HTML,SASS",
+        "description": "Reproducing the home page of a website.",
+        "git": "https://github.com/ChanFrancis/Copy-website-HTML-SASS",
+        "link": ""
+    }
+]

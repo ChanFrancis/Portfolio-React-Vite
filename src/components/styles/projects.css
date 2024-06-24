@@ -1,0 +1,347 @@
+.Projects {
+    transform-origin: bottom right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Spline_bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.Spline_bg canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.glassEffect {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    filter: blur(4px);
+    backdrop-filter: blur(4px);
+
+}
+
+.ProjectsContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ProjectsContainer input[type="radio"] {
+    display: none;
+}
+
+.ProjectsContainer input[type="radio"]:checked+label {
+    font-weight: 600;
+    /* background-color: rgba(219, 218, 218, 0.979); */
+    box-shadow: inset 0px 0px 9px -3px rgb(0, 0, 0);
+}
+
+.ProjectsContainer label {
+    width: 135px;
+    height: 40px;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProjectsRadio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1.5rem;
+}
+
+.ProjectsExperience {
+    border-radius: 25px 0 0 25px;
+    border-right: 2px solid black;
+}
+
+.ProjectsMyProjects {
+    border-radius: 0 25px 25px 0;
+    border-left: 2px solid black;
+}
+
+.ExperiencesOrProjects {
+    position:relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.ExperienceContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1%;
+    transition: all 0.80s ease-out;
+    /* transform: translateX(-100vw); */
+
+    height: 75%;
+    margin: 2rem;
+    width: calc(100% - 4rem);
+    position: absolute;
+}
+
+.ExperienceContainer>div {
+    width: 60%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.MyProjectsContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1%;
+    transition: all 0.5s ease-out;
+    /* transform: translateX(100vw); */
+
+    height: 75%;
+    margin: 2rem;
+    width: calc(100% - 4rem);
+    position: absolute;
+}
+
+.MyProjectsContainer>div {
+    width: 60%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.imageContainer {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#titleContainer {
+    height: 10%;
+    font-size: 2rem;
+    color: #5639A6;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 25px;
+    
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#titleContainer div {
+    height: 100%;
+    width: 10%;
+    object-fit: contain;
+    border-radius: 25px 0 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#titleContainer img {
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 25px 0 0 25px;
+    margin: 0 0.25rem;
+
+}
+
+#titleContainer div:hover {
+    background-color: white;
+}
+
+#titleContainer div:hover img {
+    transform: scale(1.05);
+}
+
+.returnArrow {
+    transform: rotate(180deg);
+    border-radius: 0 25px 25px 0;
+}
+
+.slideContainer {
+    width: 100%;
+    height: 89%;
+    margin-top: 1%;
+    border-radius: 25px;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.ImageLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ImageLoader img {
+    width: 10%;
+}
+
+.slideImage {
+    min-width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #8080808f;
+    flex: 0 0 auto;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideImageRight {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.3s ease-out;
+}
+
+.slideImageRight:hover {
+    background-color: rgba(128, 128, 128, 0.178);
+}
+
+.slideImageRight img {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.slideImageRight:hover img {
+    opacity: 0.5;
+}
+
+.slideImageLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.3s ease-out;
+}
+
+.slideImageLeft:hover {
+    background-color: rgba(128, 128, 128, 0.178);
+}
+
+.slideImageLeft img {
+    transition: all 0.3s ease-out;
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+.slideImageLeft:hover img {
+    opacity: 0.5;
+}
+
+.slideImageLeft:active {
+    opacity: 0;
+}
+
+
+
+.ImagePilling {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ImagePilling div {
+    max-width: clamp(150px, 12vw, 20vw);
+    height: clamp(80px, 10vh, 15vh);
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+
+.ImagePilling div:hover {
+    max-width: 400px;
+    z-index: 4;
+
+}
+
+.ImagePilling img {
+    max-width: 500px;
+    height: 300px;
+    transition: all 0.2s ease-out;
+}
+
+.ImagePilling img:hover {
+    max-width: 600px;
+    height: 350px;
+    z-index: 4;
+}
+
+.ImageDescription {
+    width: 40% !important;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;
+    gap: clamp(1rem, 2.5vw, 4rem);
+
+    background-color: rgba(255, 255, 255, 0.623);
+    height: 100%;
+    z-index: 5;
+    position: relative;
+    font-size: clamp(1.25rem, 2vw, 3rem);
+    padding: clamp(0.75rem, 1.75vw,2rem) clamp(1.1rem, 2.5vw, 3rem);
+    color: black;
+}
+
+.ImageDescription div{
+    width: 100%;
+}
+
+.ImageDescription img {
+    width: 70px;
+    height: 70px;
+}
+
+.DescriptionJobTitle {
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    font-weight: 600;
+}
+
+.DescriptionLink {
+    font-size: clamp(1rem, 1.25vw, 2.5rem) ;
+}
+
+.stacks {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.stacks div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(71, 27, 27);
+    -webkit-text-stroke: 1px rgb(85, 11, 11); 
+}

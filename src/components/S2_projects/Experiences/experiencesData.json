@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "company": "FoodEatUp",
+        "title": "Front-end web developper",
+        "stacks": "Laravel,JS,HTML,CSS",
+        "description": "Developing the company's website front-end with the UX designer."
+    },
+    {
+        "id": 2,
+        "company": "Agence_Meelz__MLD",
+        "title": "Front-end web developper",
+        "stacks": "Liquid,JS,HTML,CSS",
+        "description": "Developing an e-business site for a client using Shopify Liquid."
+    }
+  ]

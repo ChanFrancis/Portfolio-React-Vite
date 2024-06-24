@@ -1,0 +1,40 @@
+.Contact {
+    background-color: #A3C4F3;
+}
+
+.ContactContainer {
+    border-radius: 50% 20% / 10% 40%;
+    background-color: #CAB8C7;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactMe {
+line-height: 1.25;
+}
+
+.LinkedIn {
+    margin-top: 1.5rem;
+    width: 50px;
+}
+
+.email {
+    color:blue;
+}
+
+.CopyRight {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}

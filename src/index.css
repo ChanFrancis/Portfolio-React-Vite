@@ -1,0 +1,120 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: beige;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2d2d2d;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+section {
+    width: 98%;
+    height: 98vh;
+    border-radius: 35px;
+    border: 7px solid gray;
+    box-sizing: border-box;
+    margin: auto;
+    position: absolute;
+    transition: all 1s ease-out;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.35em, 3.5vw, 4rem);
+    -webkit-text-stroke: 1px rgb(87, 42, 42);
+}
+
+h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3vw, 4rem);
+    -webkit-text-stroke: 1px rgb(87, 42, 42);
+}
+
+
+#WebsiteLoader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: white;
+    transition: all 0.75s ease-out;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .firstLoaderCircle {
+    width: 16vw;
+    height: 16vw;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .secondLoaderCircle {
+    background-color: white;
+    width: 88%;
+    height: 88%;
+    border-radius: 100%;
+    border: 2px solid black;
+    z-index: 2;
+    font-size:  clamp(2em, 4vw, 5rem);
+    font-weight: 900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  #loaderColorFiller {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(0deg, rgba(29,126,219,1) 0%, rgba(36,63,235,1) 10%, rgba(13,124,152,1) 60%, rgba(93,45,253,1) 97%);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fillAnimation 2.5s ease forwards;
+  }
+
+  @keyframes fillAnimation {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100%;
+    }
+  }

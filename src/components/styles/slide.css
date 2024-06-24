@@ -1,0 +1,55 @@
+.slide_next {
+    animation: slideOut 1.5s forwards;
+}
+
+.slide_watching {
+    animation: slideIn 1.5s forwards;
+}
+
+
+@keyframes slideOut {
+    from {}
+
+    10%{
+        border: 0px;
+    }
+
+    50% {
+        overflow: hidden;
+        border-radius: 90px;
+        transform: scale(0.3);
+        opacity: 1;
+    }
+
+    60% {
+        transform: scale(0.3);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.3) rotateY(90deg) rotateX(0deg);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3) rotateY(90deg) rotateX(0deg);
+    }
+
+    40% {transform: scale(0.3);}
+
+    50% {
+        transform-origin: bottom right;
+        overflow: hidden;
+        border-radius: 90px;
+        transform: scale(0.3);
+        opacity: 1;
+    }
+
+    90% {
+        border: 0px;
+    }
+
+    to {}
+}
