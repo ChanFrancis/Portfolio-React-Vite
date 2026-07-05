@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
-function IMGselect() {
+function useImageSelect() {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
@@ -25,4 +25,4 @@ function IMGselect() {
     return images
 }
 
-export default IMGselect
+export default useImageSelect

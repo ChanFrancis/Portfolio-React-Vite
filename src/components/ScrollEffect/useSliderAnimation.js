@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useSelector } from "react-redux"
 
 
-// Initialise classname animation when the Redux pageCount is above reduxCountCheck  
-function activateSliderAnimation(reduxCountCheck) {
+// Initialise classname animation when the Redux pageCount is above reduxCountCheck
+function useSliderAnimation(reduxCountCheck) {
 
     let pageCount = useSelector(state => state.pageCount.value)
 
@@ -16,4 +16,4 @@ function activateSliderAnimation(reduxCountCheck) {
     return `${pageCount > reduxCountCheck ? "slide_next" : activated ? "slide_watching" : ""}`;
 }
 
-export default activateSliderAnimation
+export default useSliderAnimation

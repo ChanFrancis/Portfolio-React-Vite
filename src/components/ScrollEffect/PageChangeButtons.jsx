@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useDispatch } from "react-redux"
 import { increment, decrement } from "./pageCountRedux"
 import { useSelector } from "react-redux"
@@ -6,7 +6,7 @@ import { useSelector } from "react-redux"
 import pageArrow from '../images/pageArrow.png'
 import '../styles/pagesArrows.css'
 
-function PageChangeButtons(currentSlide) {
+function PageChangeButtons({ currentSlide }) {
 
     let dispatch = useDispatch()
     const pageCountRef = useRef(null);

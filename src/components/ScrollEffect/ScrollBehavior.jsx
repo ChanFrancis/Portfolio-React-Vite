@@ -42,7 +42,7 @@ function ScrollBehavior() {
             window.removeEventListener("wheel", handleScroll);
         };
 
-    }, [])
+    }, [dispatch])
 
     return null
 }

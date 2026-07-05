@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ImagesScroller from '../Utils/ImagesScroller';
-import IMGselect from '../Utils/IMGselect';
+import useImageSelect from '../Utils/useImageSelect';
 import DescriptionRenderer from '../Utils/DescriptionRenderer';
 import experiencesData from "./experiencesData.json"
 import TitlesScroller from '../Utils/TitlesScroller';
@@ -10,7 +10,7 @@ function Experience() {
     const experienceTitlesList = experiencesData.map(experience => experience.company);
     const [currentDataIndex, setCurrentDataIndex] = useState(0);
     let currentTitle = experienceTitlesList[currentDataIndex];
-    const images = IMGselect();   
+    const images = useImageSelect();
 
     const handleTitleChange = (newDataIndex) => {
         setCurrentDataIndex(newDataIndex);
@@ -33,12 +33,12 @@ function Experience() {
                 </div>
 
                 <div id="slideContainer" className='slideContainer'>
-                    {ImagesScroller(experienceImages, currentTitle)}
+                    <ImagesScroller receivedImages={experienceImages} title={currentTitle} />
                 </div>
             </div>
 
             <div className='ImageDescription'>
-                {DescriptionRenderer(experiencesData[currentDataIndex])}
+                <DescriptionRenderer data={experiencesData[currentDataIndex]} />
             </div>
         </>
 

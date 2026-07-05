@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useReducer } from 'react'
+import { useEffect, useState } from 'react'
 import useImageLoader from '../../Utils/useImagesLoader';
 import '../../styles/projects.css';
 import grayArrow from '../../images/arrow_gray.png'
@@ -6,9 +6,9 @@ import grayArrow from '../../images/arrow_gray.png'
 
 /*  ImagesScroller function takes the URL of all images that should be displayed and the title  
     The "title" will be used for an useEffect dependency */
-function ImagesScroller(receivedImages, title) {
+function ImagesScroller({ receivedImages, title }) {
 
-    const { loading, loaded, error, handleImageLoad, handleImageError } = useImageLoader(receivedImages, title);
+    const { loading, loaded, handleImageLoad, handleImageError } = useImageLoader(receivedImages, title);
     const [actualSlide, setActualSlide] = useState(0);
 
     useEffect(() => {

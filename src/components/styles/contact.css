@@ -22,8 +22,15 @@
 line-height: 1.25;
 }
 
-.LinkedIn {
+.Socials {
     margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.LinkedIn,
+.GitHub {
     width: 50px;
 }
 

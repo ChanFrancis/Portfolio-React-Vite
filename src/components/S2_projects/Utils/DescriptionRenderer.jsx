@@ -1,6 +1,4 @@
-import React from 'react'
-
-function DescriptionRenderer(data) {
+function DescriptionRenderer({ data }) {
     const { title, stacks, description } = data;
     const stacksList = stacks.split(",");
     const FormattedTitle = title.replace(/_/g, ' ');
@@ -9,8 +7,8 @@ function DescriptionRenderer(data) {
         <>
             <div className='DescriptionJobTitle'>
                 {FormattedTitle}
-                {data.git ? <div className='DescriptionLink'>Git : <a href={data.git} >Link</a></div> : null}
-                {data.link ? <div className='DescriptionLink'>Website : <a href={data.link} >Link</a></div> : null}
+                {data.git ? <div className='DescriptionLink'>Git : <a href={data.git} target="_blank" rel="noopener noreferrer">Link</a></div> : null}
+                {data.link ? <div className='DescriptionLink'>Website : <a href={data.link} target="_blank" rel="noopener noreferrer">Link</a></div> : null}
             </div>
 
             <div>

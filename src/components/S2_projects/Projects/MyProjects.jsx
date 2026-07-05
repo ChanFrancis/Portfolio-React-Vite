@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ImagesScroller from '../Utils/ImagesScroller';
-import IMGselect from '../Utils/IMGselect';
+import useImageSelect from '../Utils/useImageSelect';
 import DescriptionRenderer from '../Utils/DescriptionRenderer';
 import myProjectsData from "./myProjectsData.json"
 import TitlesScroller from '../Utils/TitlesScroller';
@@ -12,7 +12,7 @@ function MyProjects() {
     const projectsTitlesList = myProjectsData.map(project => project.title);
     const [currentDataIndex, setCurrentDataIndex] = useState(0);
     let currentTitle = projectsTitlesList[currentDataIndex];
-    const images = IMGselect();   
+    const images = useImageSelect();
 
     const handleTitleChange = (newDataIndex) => {
         setCurrentDataIndex(newDataIndex);
@@ -25,7 +25,7 @@ function MyProjects() {
     return (
         <>
             <div className='ImageDescription'>
-                {DescriptionRenderer(myProjectsData[currentDataIndex])}
+                <DescriptionRenderer data={myProjectsData[currentDataIndex]} />
             </div>
 
             <div className='imageContainer'>
@@ -39,7 +39,7 @@ function MyProjects() {
                 </div>
 
                 <div id="slideContainer" className='slideContainer'>
-                    {ImagesScroller(projectsImages, currentTitle)}
+                    <ImagesScroller receivedImages={projectsImages} title={currentTitle} />
                 </div>
             </div>
 

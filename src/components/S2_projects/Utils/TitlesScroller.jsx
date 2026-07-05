@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import { useState } from 'react'
 import arrow from '../../images/arrow.png'
 
 function TitlesScroller({titles, setNewDataIndex}) {

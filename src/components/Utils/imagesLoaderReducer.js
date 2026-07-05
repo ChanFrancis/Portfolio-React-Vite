@@ -15,7 +15,7 @@ const imagesLoaderReducer = (state, action) => {
         loading: true,
         loaded: Array(action.payload.length).fill(false),
       };
-    case IMAGE_LOAD_SUCCESS:
+    case IMAGE_LOAD_SUCCESS: {
       const newLoadedStatus = [...state.loaded];
       newLoadedStatus[action.payload.index] = true;
       return {
@@ -23,7 +23,8 @@ const imagesLoaderReducer = (state, action) => {
         loading: newLoadedStatus.some(loaded => !loaded),
         loaded: newLoadedStatus,
       };
-    case IMAGE_LOAD_FAILURE:
+    }
+    case IMAGE_LOAD_FAILURE: {
       const failureLoadedStatus = [...state.loaded];
       failureLoadedStatus[action.payload.index] = false;
       return {
@@ -31,6 +32,7 @@ const imagesLoaderReducer = (state, action) => {
         loading: failureLoadedStatus.some(loaded => !loaded),
         loaded: failureLoadedStatus,
       };
+    }
     default:
       return state;
   }

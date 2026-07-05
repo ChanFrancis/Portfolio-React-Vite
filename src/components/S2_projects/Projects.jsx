@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import activateSliderAnimation from '../ScrollEffect/activateSliderAnimation'
-import Spline from '@splinetool/react-spline';
+import { useState } from 'react'
+import useSliderAnimation from '../ScrollEffect/useSliderAnimation'
 import Experience from './Experiences/Experience'
 import MyProjects from './Projects/MyProjects'
 import PageChangeButtons from '../ScrollEffect/PageChangeButtons'
@@ -16,8 +15,8 @@ function Projects() {
     };
 
     return (
-        <section className={`Projects ${activateSliderAnimation(1)}`}>
-            <Spline scene="https://prod.spline.design/w4KjH9I6F1urphN2/scene.splinecode" className="Spline_bg" />
+        <section className={`Projects ${useSliderAnimation(1)}`}>
+            <img src="/spline_flower.png" alt="" className="ProjectsBg" />
 
             <div className='glassEffect'></div>
 
@@ -39,7 +38,7 @@ function Projects() {
                         <MyProjects />
                     </div>
                 </div>
-                {PageChangeButtons()}
+                <PageChangeButtons />
             </div>
 
         </section>
