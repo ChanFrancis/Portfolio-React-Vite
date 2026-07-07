@@ -17,7 +17,7 @@ function DescriptionRenderer({ data }) {
                     {stacksList.map((stack, key) => {
                         return (
                             <div key={key }>
-                                <img src={`/${stack}.png`} alt={stack}/>
+                                <img src={`/${stack}.png`} alt={stack} onError={(e) => { e.currentTarget.style.display = 'none'; }}/>
                                 {stack}
                             </div>)
                     })}

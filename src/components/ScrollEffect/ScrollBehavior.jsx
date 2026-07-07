@@ -15,6 +15,12 @@ function ScrollBehavior() {
 
     useEffect(() => {
         const handleScroll = (event) => {
+            // Scrolling inside the description or the projects gallery modal only
+            // scrolls that content — never changes page.
+            if (event.target.closest?.('.ImageDescription, .galleryOverlay')) {
+                return;
+            }
+
             const sectionsCounting = document.querySelectorAll('section').length-1;
             const deltaY = event.deltaY;
             const currentPageCount = pageCountRef.current;

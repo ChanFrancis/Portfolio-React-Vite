@@ -27,6 +27,7 @@ function Experience() {
 
                     <TitlesScroller
                         titles={experienceTitlesList}
+                        currentIndex={currentDataIndex}
                         setNewDataIndex={handleTitleChange}
                     />
 

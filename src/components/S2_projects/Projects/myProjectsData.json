@@ -1,6 +1,70 @@
 [
     {
         "id": 1,
+        "title": "Passerelle_IDF_Mobilites",
+        "stacks": "React,Next.JS,MongoDB,Payload",
+        "description": "Reworked the Ile-de-France Mobilites subscription flow, adding an AI chatbot, speech-to-text, and face recognition.",
+        "git": "https://github.com/ChanFrancis/passerelle-idf",
+        "link": ""
+    },
+    {
+        "id": 2,
+        "title": "Bank_Avenir",
+        "stacks": "Next.JS,Nest,Node.JS,Docker",
+        "description": "Secured banking app built on clean architecture with two interchangeable back-ends - switch between them live via tmux with zero data loss.",
+        "git": "https://github.com/ChanFrancis/Banking-clean-architecture",
+        "link": ""
+    },
+    {
+        "id": 3,
+        "title": "Lego_Design_System",
+        "stacks": "Figma",
+        "description": "Pixel-perfect replication of a LEGO store page, rebuilding its full design system.",
+        "git": "",
+        "link": ""
+    },
+    {
+        "id": 4,
+        "title": "Gym_Back_Office",
+        "stacks": "Node.JS",
+        "description": "Back office for a gym where admins create exercises, training programs, challenges and rewards.",
+        "git": "https://github.com/ChanFrancis/Gym-NodeJS",
+        "link": ""
+    },
+    {
+        "id": 5,
+        "title": "n8n_AI_Agent",
+        "stacks": "n8n",
+        "description": "n8n workflow orchestrating an AI agent paired with Tavily to act as an expert developer that strictly follows official documentation.",
+        "git": "",
+        "link": ""
+    },
+    {
+        "id": 6,
+        "title": "Risibank",
+        "stacks": "Vue.js,Nuxt",
+        "description": "Meme bank wired to an API serving random memes; you can also post and share your own.",
+        "git": "https://github.com/ChanFrancis/risibank-nuxt",
+        "link": ""
+    },
+    {
+        "id": 7,
+        "title": "Watchlist",
+        "stacks": "Nest,React",
+        "description": "Personal movie watchlist to save, share, rate and review films, secured with a 2FA auth system.",
+        "git": "https://github.com/ChanFrancis/nest_final",
+        "link": ""
+    },
+    {
+        "id": 8,
+        "title": "Websocket_Chat",
+        "stacks": "Nest,React",
+        "description": "Real-time chat with private messages, group rooms and custom channels, secured with 2FA auth.",
+        "git": "https://github.com/ChanFrancis/Nest-React-WebSocket",
+        "link": ""
+    },
+    {
+        "id": 9,
         "title": "Portfolio",
         "stacks": "React,Vite",
         "description": "Developing my website using React/Vite. Implementing Redux, Reducer, Spline, and other hooks.",
@@ -8,7 +72,7 @@
         "link": "/"
     },
     {
-        "id": 2,
+        "id": 10,
         "title": "ToDoList",
         "stacks": "JS",
         "description": "Making a to do list with JS. CRUD available and a search bar.",
@@ -16,7 +80,7 @@
         "link": ""
     },
     {
-        "id": 3,
+        "id": 11,
         "title": "Sudoku",
         "stacks": "JS",
         "description": "Sudoku game using JS. You can play the game and check if your input are correct or not.",
@@ -24,7 +88,7 @@
         "link": "https://sudoku-js-chx6.onrender.com/"
     },
     {
-        "id": 4,
+        "id": 12,
         "title": "Social_media",
         "stacks": "MongoDB,Express,React,Node.JS",
         "description": "Developping social media using MERN Stack. Real time messenger with SocketIO, Rest API, authentication, ...",
@@ -32,7 +96,7 @@
         "link": "https://frontendprojet.onrender.com/"
     },
     {
-        "id": 5,
+        "id": 13,
         "title": "Visit_card",
         "stacks": "HTML,CSS",
         "description": "Small visit card/ mini-portfolio developped with HTML and CSS only.",
@@ -40,7 +104,7 @@
         "link": ""
     },
     {
-        "id": 6,
+        "id": 14,
         "title": "Bootstrap",
         "stacks": "Bootstrap",
         "description": "Remodeling the Visit card project using bootstrap.",
@@ -48,7 +112,7 @@
         "link": ""
     },
     {
-        "id": 7,
+        "id": 15,
         "title": "Display_JSON_data",
         "stacks": "Angular",
         "description": "Fetching JSON data and displaying the content using Angular",
@@ -56,7 +120,7 @@
         "link": ""
     },
     {
-        "id": 8,
+        "id": 16,
         "title": "Calculator",
         "stacks": "Angular",
         "description": "Calculator developped with Angular",
@@ -64,7 +128,7 @@
         "link": ""
     },
     {
-        "id": 9,
+        "id": 17,
         "title": "Movie_searcher",
         "stacks": "JS,HTML,CSS",
         "description": "Using the OMDB API to research movie in their database and displaying the result.",
@@ -72,7 +136,7 @@
         "link": "https://francis-chan-ajax-c8d5ed.netlify.app/"
     },
     {
-        "id": 10,
+        "id": 18,
         "title": "Website_home_page_copy",
         "stacks": "HTML,SASS",
         "description": "Reproducing the home page of a website.",

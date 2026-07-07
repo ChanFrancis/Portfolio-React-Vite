@@ -147,6 +147,21 @@
     cursor: pointer;
 }
 
+.titleText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.titleCounter {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #5639A6;
+    opacity: 0.7;
+}
+
 #titleContainer img {
     height: 80%;
     width: 100%;
@@ -189,6 +204,12 @@
 
 .ImageLoader img {
     width: 10%;
+}
+
+.noPreview {
+    color: #555;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-style: italic;
 }
 
 .slideImage {
@@ -306,6 +327,12 @@
     font-size: clamp(1.25rem, 2vw, 3rem);
     padding: clamp(0.75rem, 1.75vw,2rem) clamp(1.1rem, 2.5vw, 3rem);
     color: black;
+
+    /* Scroll the description vertically when its text overflows.
+       !important is needed because `.MyProjectsContainer > div` / `.ExperienceContainer > div`
+       set `overflow: hidden` with higher specificity (same reason width uses !important). */
+    overflow-y: auto !important;
+    overflow-x: hidden;
 }
 
 .ImageDescription div{
@@ -338,5 +365,134 @@
     justify-content: space-evenly;
     align-items: center;
     color: rgb(71, 27, 27);
-    -webkit-text-stroke: 1px rgb(85, 11, 11); 
+    -webkit-text-stroke: 1px rgb(85, 11, 11);
+}
+
+/* ---- Projects gallery button + modal ---- */
+
+.galleryButton {
+    position: sticky;
+    top: 0;
+    align-self: stretch;
+    z-index: 1;
+    padding: 0.5em 1em;
+    font-size: clamp(0.9rem, 1.2vw, 1.5rem);
+    font-weight: 600;
+    color: white;
+    background-color: #5639A6;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.galleryButton:hover {
+    background-color: #6f4dcf;
+}
+
+.galleryOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.galleryModal {
+    position: relative;
+    width: min(1100px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    background-color: #f4f2f8;
+    border-radius: 20px;
+    padding: clamp(1.5rem, 3vw, 3rem);
+    box-sizing: border-box;
+}
+
+.galleryClose {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #5639A6;
+    cursor: pointer;
+}
+
+.galleryHeading {
+    margin: 0 0 1.5rem;
+    color: #5639A6;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    text-align: center;
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.galleryCard {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.galleryCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.galleryCardBg {
+    position: absolute;
+    inset: 0;
+    background-color: #5639A6;
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px) brightness(0.55);
+    transform: scale(1.1);
+}
+
+.galleryCardContent {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.galleryCardTitle {
+    color: white;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.galleryCardLogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.galleryCardLogos img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }

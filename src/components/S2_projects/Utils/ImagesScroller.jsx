@@ -28,6 +28,10 @@ function ImagesScroller({ receivedImages, title }) {
     return (
         <>
 
+            {receivedImages.length === 0 && (
+                <div className="ImageLoader"><span className="noPreview">No preview available</span></div>
+            )}
+
             {receivedImages.map((image, key) => {
                 return (
 
@@ -53,7 +57,7 @@ function ImagesScroller({ receivedImages, title }) {
                 )
             })
             }
-            {loading && <div className="ImageLoader"><img src="/Loading.gif" alt="Loading..." /></div>}
+            {loading && receivedImages.length > 0 && <div className="ImageLoader"><img src="/Loading.gif" alt="Loading..." /></div>}
 
 
         </>

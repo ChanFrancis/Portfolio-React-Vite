@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "company": "FoodEatUp",
-        "title": "Front-end web developper",
-        "stacks": "Laravel,JS,HTML,CSS",
-        "description": "Developing the company's website front-end with the UX designer."
+        "company": "BeeToGreen",
+        "title": "Full Stack Developer",
+        "stacks": "Laravel,React,Grafana,MySQL",
+        "description": "Full-stack development on a B2B2C sustainable-mobility marketplace (30k+ monthly visitors). Built post-purchase features - Stripe payments & subscriptions, billing, debt recovery, margin calculation, supplier catalog/stock connectors - with input validation, unit tests, and Grafana/Slack monitoring plus business-KPI dashboards."
     },
     {
         "id": 2,
@@ -12,5 +12,12 @@
         "title": "Front-end web developper",
         "stacks": "Liquid,JS,HTML,CSS",
         "description": "Developing an e-business site for a client using Shopify Liquid."
+    },
+    {
+        "id": 3,
+        "company": "FoodEatUp",
+        "title": "Front-end web developper",
+        "stacks": "Laravel,JS,HTML,CSS",
+        "description": "Developing the company's website front-end with the UX designer."
     }
-  ]
+]
