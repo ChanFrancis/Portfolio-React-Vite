@@ -15,6 +15,12 @@ function ScrollBehavior() {
 
     useEffect(() => {
         const handleScroll = (event) => {
+            // While the loading screen is still visible, ignore wheel navigation.
+            const loader = document.getElementById('WebsiteLoader');
+            if (loader && loader.style.display !== 'none') {
+                return;
+            }
+
             // Scrolling inside the description or the projects gallery modal only
             // scrolls that content — never changes page.
             if (event.target.closest?.('.ImageDescription, .galleryOverlay')) {
