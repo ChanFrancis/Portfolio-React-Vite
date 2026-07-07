@@ -6,7 +6,7 @@ import grayArrow from '../../images/arrow_gray.png'
 
 /*  ImagesScroller function takes the URL of all images that should be displayed and the title  
     The "title" will be used for an useEffect dependency */
-function ImagesScroller({ receivedImages, title }) {
+function ImagesScroller({ receivedImages, title, imagesReady }) {
 
     const { loading, loaded, handleImageLoad, handleImageError } = useImageLoader(receivedImages, title);
     const [actualSlide, setActualSlide] = useState(0);
@@ -29,7 +29,9 @@ function ImagesScroller({ receivedImages, title }) {
         <>
 
             {receivedImages.length === 0 && (
-                <div className="ImageLoader"><span className="noPreview">No preview available</span></div>
+                imagesReady
+                    ? <div className="ImageLoader"><span className="noPreview">No preview available</span></div>
+                    : <div className="ImageLoader"><img src="/Loading.gif" alt="Loading..." /></div>
             )}
 
             {receivedImages.map((image, key) => {

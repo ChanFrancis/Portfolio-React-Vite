@@ -49,7 +49,7 @@ function MyProjects() {
                 </div>
 
                 <div id="slideContainer" className='slideContainer'>
-                    <ImagesScroller receivedImages={projectsImages} title={currentTitle} />
+                    <ImagesScroller receivedImages={projectsImages} title={currentTitle} imagesReady={images.length > 0} />
                 </div>
             </div>
 

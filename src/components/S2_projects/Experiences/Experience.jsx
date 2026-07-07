@@ -34,7 +34,7 @@ function Experience() {
                 </div>
 
                 <div id="slideContainer" className='slideContainer'>
-                    <ImagesScroller receivedImages={experienceImages} title={currentTitle} />
+                    <ImagesScroller receivedImages={experienceImages} title={currentTitle} imagesReady={images.length > 0} />
                 </div>
             </div>
 
