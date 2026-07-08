@@ -12,21 +12,19 @@ function MyProjects() {
     const projectsTitlesList = myProjectsData.map(project => project.title);
     const [currentDataIndex, setCurrentDataIndex] = useState(0);
     const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-    let currentTitle = projectsTitlesList[currentDataIndex];
+    const currentTitle = projectsTitlesList[currentDataIndex];
     const images = useImageSelect();
 
-    const handleTitleChange = (newDataIndex) => {
+    const handleTitleChange = (newDataIndex: number) => {
         setCurrentDataIndex(newDataIndex);
     };
 
-    const openProjectFromGallery = (index) => {
+    const openProjectFromGallery = (index: number) => {
         setCurrentDataIndex(index);
         setIsGalleryOpen(false);
     };
 
-    const projectsImages = images.filter((img) => {
-        return img.includes(currentTitle);
-    });
+    const projectsImages = images.filter((img) => img.includes(currentTitle));
 
     return (
         <>

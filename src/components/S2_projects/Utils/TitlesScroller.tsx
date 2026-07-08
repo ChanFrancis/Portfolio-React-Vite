@@ -1,6 +1,12 @@
 import arrow from '../../images/arrow.png'
 
-function TitlesScroller({ titles, currentIndex, setNewDataIndex }) {
+interface TitlesScrollerProps {
+    titles: string[];
+    currentIndex: number;
+    setNewDataIndex: (index: number) => void;
+}
+
+function TitlesScroller({ titles, currentIndex, setNewDataIndex }: TitlesScrollerProps) {
 
     const FormattedTitle = titles[currentIndex].replace(/_/g, ' ');
     const titlesListLength = titles.length - 1;

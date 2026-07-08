@@ -2,7 +2,6 @@ import { useEffect, useRef, Suspense, lazy } from "react";
 import useSliderAnimation from '../ScrollEffect/useSliderAnimation'
 import useSplineScene from '../Utils/useSplineScene'
 import { useDispatch } from "react-redux"
-import { useSelector } from "react-redux"
 import { increment } from "../ScrollEffect/pageCountRedux"
 import PageChangeButtons from '../ScrollEffect/PageChangeButtons'
 const Spline = lazy(() => import('@splinetool/react-spline'));
@@ -43,10 +42,7 @@ function hideLoader() {
 
 function Presentation() {
 
-    let dispatch = useDispatch()
-    const pageCountRef = useRef(null);
-    let pageCount = useSelector(state => state.pageCount.value)
-    pageCountRef.current = pageCount;
+    const dispatch = useDispatch()
 
     const redirectPageProjects = () => {
         dispatch(increment());
@@ -57,7 +53,7 @@ function Presentation() {
 
     // Warm the Spline runtime chunk in parallel with the scene download.
     useEffect(() => {
-        import('@splinetool/react-spline');
+        void import('@splinetool/react-spline');
     }, []);
 
     // Start the fill on mount (main thread is free here). The transition then runs

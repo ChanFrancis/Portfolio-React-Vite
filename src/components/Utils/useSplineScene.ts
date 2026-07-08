@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react'
 
+interface UseSplineScene {
+  sceneUrl: string | null;
+  progress: number;
+  error: Error | null;
+}
+
 /*  Preloads a Spline .splinecode file with real download progress.
     Streams the response, reports a 0-99 % based on Content-Length, and exposes
     the fully-downloaded scene as an in-memory blob URL so <Spline scene={sceneUrl}>
@@ -7,14 +13,14 @@ import { useState, useEffect } from 'react'
 
     Note: Content-Length is a CORS-safelisted header, so the % works cross-origin.
     If the server omits it (or gzips), we fall back to an indeterminate creep. */
-export default function useSplineScene(url) {
-  const [sceneUrl, setSceneUrl] = useState(null)
+export default function useSplineScene(url: string): UseSplineScene {
+  const [sceneUrl, setSceneUrl] = useState<string | null>(null)
   const [progress, setProgress] = useState(0)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
     let cancelled = false
-    let objectUrl = null
+    let objectUrl: string | null = null
 
     const load = async () => {
       try {
@@ -22,8 +28,10 @@ export default function useSplineScene(url) {
         if (!response.ok) throw new Error(`HTTP ${response.status}`)
 
         const total = Number(response.headers.get('Content-Length')) || 0
-        const reader = response.body.getReader()
-        const chunks = []
+        const reader = response.body?.getReader()
+        if (!reader) throw new Error('No readable response body')
+
+        const chunks: Uint8Array[] = []
         let received = 0
 
         for (;;) {
@@ -42,10 +50,10 @@ export default function useSplineScene(url) {
         }
 
         if (cancelled) return
-        objectUrl = URL.createObjectURL(new Blob(chunks))
+        objectUrl = URL.createObjectURL(new Blob(chunks as BlobPart[]))
         setSceneUrl(objectUrl)
       } catch (err) {
-        if (!cancelled) setError(err)
+        if (!cancelled) setError(err instanceof Error ? err : new Error(String(err)))
       }
     }
 

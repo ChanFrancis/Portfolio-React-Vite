@@ -1,17 +1,25 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import type { Project } from '../../../types'
+
+interface ProjectsGalleryProps {
+    projects: Project[];
+    images: string[];
+    onSelect: (index: number) => void;
+    onClose: () => void;
+}
 
 /*  Modal gallery of every project. Rendered through a portal into document.body so it
     escapes the transformed section stacking contexts and covers the whole viewport.
     Clicking a card selects that project (by its index in the data array) and closes. */
-function ProjectsGallery({ projects, images, onSelect, onClose }) {
+function ProjectsGallery({ projects, images, onSelect, onClose }: ProjectsGalleryProps) {
 
     // First image of a project = first asset whose filename contains the title.
-    const firstImageFor = (title) => images.find((img) => img.includes(title));
+    const firstImageFor = (title: string) => images.find((img) => img.includes(title));
 
     // Close on Escape.
     useEffect(() => {
-        const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+        const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
         window.addEventListener('keydown', onKey);
         return () => window.removeEventListener('keydown', onKey);
     }, [onClose]);
